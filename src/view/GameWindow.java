@@ -8,7 +8,7 @@ import BreezyGUI.GBFrame;
 public class GameWindow extends GBFrame
 {
     private static final GameWindow instance = new GameWindow(600, 480);
-    private View currentView;
+    private JPanel currentView;
 
     private GameWindow(int width, int height)
     {
@@ -18,12 +18,12 @@ public class GameWindow extends GBFrame
         setVisible(true);
     }
 
-    public View getCurrentView()
+    public JPanel getCurrentView()
     {
         return currentView;
     }
 
-    public void setCurrentView(View currentView)
+    public void setCurrentView(JPanel currentView)
     {
         this.currentView = currentView;
     }

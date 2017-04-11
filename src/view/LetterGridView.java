@@ -31,12 +31,12 @@ class LetterGridView extends View
     {
         this.gridButtonArray = new GridButton[letterGrid.getHeight()][letterGrid.getWidth()];
 
-        for (int y = 0; y < letterGrid.getHeight(); y++)
-            for (int x = 0; x < letterGrid.getWidth(); x++)
+        for (gbc.gridy = 0; gbc.gridy < letterGrid.getHeight(); gbc.gridy++)
+            for (gbc.gridx = 0; gbc.gridx < letterGrid.getWidth(); gbc.gridx++)
             {
-                GridButton button = new GridButton(letterGrid.getLetterAt(new Coord(x, y)) + "", new Coord(x, y));
-                this.add(button, x, y, 1, 1);
-                this.gridButtonArray[y][x] = button;
+                GridButton button = new GridButton(letterGrid.getLetterAt(new Coord(gbc.gridx, gbc.gridy)) + "", new Coord(gbc.gridx, gbc.gridy));
+                this.add(button, gbc.gridx, gbc.gridy, 1, 1);
+                this.gridButtonArray[gbc.gridy][gbc.gridx] = button;
             }
 
         gbc.gridx++;

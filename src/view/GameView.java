@@ -5,7 +5,7 @@ import model.Game;
 import javax.swing.*;
 import java.awt.*;
 
-public class GameView extends View
+public class GameView extends JPanel
 {
     private Game game;
     private LetterGridView letterGridView;

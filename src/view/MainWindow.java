@@ -1,11 +1,12 @@
 package view;
 
-import BreezyGUI.GBFrame;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-public class MainWindow extends GBFrame
+public class MainWindow extends JFrame
 {
     private static final MainWindow instance = new MainWindow(600, 480);
-    private View currentView;
+    private JPanel currentView;
 
     private MainWindow(int width, int height)
     {
@@ -15,7 +16,7 @@ public class MainWindow extends GBFrame
         this.setVisible(true);
     }
 
-    public void setCurrentView(View currentView)
+    public void setCurrentView(JPanel currentView)
     {
         if (this.currentView != null)
             this.remove(this.currentView);

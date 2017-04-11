@@ -1,6 +1,5 @@
 package view;
 
-import BreezyGUI.IntegerField;
 import model.Game;
 
 import java.awt.*;
